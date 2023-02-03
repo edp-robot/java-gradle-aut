@@ -1,20 +1,10 @@
-apply plugin: 'java'
-
-group = 'com.epam.edp'
-version = '0.0.1-SNAPSHOT'
-
-description = """"""
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+plugins {
+    id 'java-library'
 }
 
 repositories {
-    maven { url "https://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
-
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
@@ -24,8 +14,12 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.register('hello') {
-    doLast {
-        println 'Hello world!'
+test {
+    reports {
+        html.enabled = false
+        junitXml{
+            enabled = true
+            outputPerTestCase = false
+        }
     }
 }
