@@ -2,5 +2,5 @@
   "dev": "gradle -q hello",
   "sit": "gradle -q hello",
   "feature": "gradle -q hello",
-  "codereview": "mvn validate -P hello"
+  "codereview": "gradle -q hello"
 }
