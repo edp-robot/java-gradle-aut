@@ -2,4 +2,4 @@
 
 test: ## Run JUnit tests
 	# Execute all tests in project
-	mvn test
+	./gradlew test
