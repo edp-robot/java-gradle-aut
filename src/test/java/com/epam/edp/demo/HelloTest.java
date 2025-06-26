@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HelloTest {
     @Test
-    void testHello() {
+    public void testHello() {
         assertEquals(2, 1 + 1);
     }
 }
