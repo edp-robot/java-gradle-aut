@@ -15,8 +15,16 @@ repositories {
     maven { url "https://repo.maven.apache.org/maven2" }
 }
 
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+}
+
 tasks.register('hello') {
     doLast {
         println 'Hello world!'
     }
+}
+
+test {
+    useJUnitPlatform()
 }
